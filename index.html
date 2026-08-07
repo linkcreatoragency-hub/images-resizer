@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Resizer — Resize Image Online Free | Photo Resizer</title>
+<meta name="description" content="Free online image resizer. Resize image to exact pixels or percentage without losing quality. Fast, secure photo resizer — no upload, no signup. JPG, PNG, WebP.">
+<link rel="canonical" href="https://images-resizer.com/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Images Resizer">
+<meta property="og:title" content="Image Resizer — Resize Image Online Free | Photo Resizer">
+<meta property="og:description" content="Free online image resizer. Resize image to exact pixels or percentage without losing quality. Fast, secure photo resizer — no upload, no signup. JPG, PNG, WebP.">
+<meta property="og:url" content="https://images-resizer.com/">
+<meta property="og:image" content="https://images-resizer.com/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Image Resizer — Resize Image Online Free | Photo Resizer">
+<meta name="twitter:description" content="Free online image resizer. Resize image to exact pixels or percentage without losing quality. Fast, secure photo resizer — no upload, no signup. JPG, PNG, WebP.">
+<meta name="twitter:image" content="https://images-resizer.com/assets/og-image.png">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Images Resizer \u2014 Free Online Image Resizer", "url": "https://images-resizer.com/", "description": "Free online tool to resize images to exact pixel dimensions or percentage without losing quality.", "applicationCategory": "MultimediaApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I resize an image online for free?", "acceptedAnswer": {"@type": "Answer", "text": "Upload your image to our free image resizer, enter the width and height in pixels (or choose a percentage), then click Resize Image. Your resized photo downloads instantly \u2014 no signup, no watermark, completely free."}}, {"@type": "Question", "name": "Does resizing an image reduce its quality?", "acceptedAnswer": {"@type": "Answer", "text": "Making an image smaller keeps quality very high because our photo resizer uses high-quality resampling. Enlarging an image beyond its original size can look soft, so we recommend downscaling whenever possible."}}, {"@type": "Question", "name": "Is it safe to resize photos on this website?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. All image resizing happens locally in your browser using JavaScript. Your photos are never uploaded to any server, so your files stay 100% private."}}, {"@type": "Question", "name": "What image formats does the image resizer support?", "acceptedAnswer": {"@type": "Answer", "text": "You can resize JPG, JPEG, PNG, WebP and GIF images. You can also change the output format to JPG, PNG or WebP while resizing."}}, {"@type": "Question", "name": "Can I resize an image to a specific file size in KB?", "acceptedAnswer": {"@type": "Answer", "text": "Yes \u2014 first resize the dimensions here, then use our Compress Image tool and adjust the quality slider until the estimated size matches the KB size you need."}}, {"@type": "Question", "name": "Can I resize images on my phone?", "acceptedAnswer": {"@type": "Answer", "text": "Absolutely. This image resize tool works on any device \u2014 Android, iPhone, tablet or desktop \u2014 right in your web browser with no app to install."}}]}</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a href="/" class="brand" aria-label="Images Resizer home"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="2" y="2" width="24" height="24" rx="6" fill="#2563eb"/><path d="M8 18l4-5 3 3.5L17.5 14l2.5 4H8z" fill="#fff"/><circle cx="10.5" cy="9.5" r="1.8" fill="#fff"/></svg><span>Images<span style="color:var(--primary)">Resizer</span></span></a>
+    <button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="/" class="active">Resize Image</a></li>
+      <li><a href="/compress-image">Compress</a></li>
+      <li><a href="/crop-image">Crop</a></li>
+      <li><a href="/convert-image">Convert</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<div class="hero container">
+  <h1>Free Online Image Resizer</h1>
+  <p class="sub">Resize image to exact pixel dimensions or scale by percentage — without losing quality. Our fast photo resizer works right in your browser: no uploads, no signup, no watermark.</p>
+</div>
+<div class="tool-wrap">
+  <div id="dropzone" class="dropzone" tabindex="0" role="button" aria-label="Upload an image">
+    <div class="dz-icon"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="1.6"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg></div>
+    <h2>Upload the image you want to resize</h2>
+    <p>or drag &amp; drop / paste an image here &middot; JPG, PNG, WebP, GIF &middot; Max quality, 100% free</p>
+    <p style="margin-top:14px"><span class="btn">Select Image</span></p>
+    <input type="file" id="file-input" accept="image/*" class="hidden">
+  </div>
+
+  <div id="tool-panel" class="tool-panel hidden">
+    <div class="tool-grid">
+      <div>
+        <div class="preview-box"><img id="preview-img" alt="Preview of the image being resized"></div>
+        <div class="file-meta"><span>File: <b id="meta-name"></b></span><span>Dimensions: <b id="meta-dims"></b></span><span>Size: <b id="meta-size"></b></span></div>
+      </div>
+      <div class="controls">
+        <div class="tab-btns">
+          <button class="active" data-mode="pixels" type="button">By Pixels</button>
+          <button data-mode="percent" type="button">By Percentage</button>
+        </div>
+        <div id="pixels-fields">
+          <div class="row-2">
+            <div class="field"><label for="w-input">Width (px)</label><input type="number" id="w-input" min="1"></div>
+            <div class="field"><label for="h-input">Height (px)</label><input type="number" id="h-input" min="1"></div>
+          </div>
+          <div class="field check"><input type="checkbox" id="lock-aspect" checked><label for="lock-aspect" style="margin:0;font-weight:500">Lock aspect ratio</label></div>
+          <div class="field"><label>Common sizes</label>
+            <div class="preset-chips">
+              <button type="button" data-w="1920" data-h="1080">1920×1080</button>
+              <button type="button" data-w="1280" data-h="720">1280×720</button>
+              <button type="button" data-w="1080" data-h="1080">1080×1080</button>
+              <button type="button" data-w="800" data-h="">800 wide</button>
+              <button type="button" data-w="640" data-h="">640 wide</button>
+            </div>
+          </div>
+        </div>
+        <div id="percent-fields" class="hidden">
+          <div class="field"><label for="percent-input">Scale: <span id="percent-val" class="range-val">50%</span></label>
+          <input type="range" id="percent-input" min="1" max="200" value="50"></div>
+        </div>
+        <div class="field"><label for="format-select">Output format</label>
+          <select id="format-select">
+            <option value="auto">Same as original</option>
+            <option value="image/jpeg">JPG</option>
+            <option value="image/png">PNG</option>
+            <option value="image/webp">WebP</option>
+          </select>
+        </div>
+        <div class="field"><label for="quality-input">Quality: <span id="quality-val" class="range-val">90%</span></label>
+        <input type="range" id="quality-input" min="0.1" max="1" step="0.05" value="0.9"></div>
+        <button id="resize-btn" class="btn big" style="width:100%" type="button">⚡ Resize Image</button>
+        <div id="result-note" class="result-note hidden"></div>
+        <p style="margin-top:12px;text-align:center"><button id="change-img" class="btn secondary" type="button">Choose a different image</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+<section class="content">
+  <h2>How to Resize an Image Online</h2>
+  <div class="steps">
+    <div class="step"><div class="num">1</div><h3>Upload your image</h3><p>Click the upload box or drag and drop your JPG, PNG, WebP or GIF photo. You can even paste an image from your clipboard.</p></div>
+    <div class="step"><div class="num">2</div><h3>Set the new size</h3><p>Enter the exact width and height in pixels, pick a common preset, or scale your image by percentage. Keep the aspect ratio locked to avoid distortion.</p></div>
+    <div class="step"><div class="num">3</div><h3>Download instantly</h3><p>Click “Resize Image” and your resized photo downloads immediately in your chosen format — free and without any watermark.</p></div>
+  </div>
+</section>
+
+<section class="content">
+  <h2>Why Use Our Photo Resizer?</h2>
+  <div class="feature-grid">
+    <div class="feature"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>100% Private &amp; Secure</h3><p>Your photos never leave your device. All image resizing happens locally in your browser — nothing is uploaded to a server.</p></div>
+    <div class="feature"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><h3>Blazing Fast</h3><p>No waiting for uploads or downloads from a server. Resize images in a split second, even large high-resolution photos.</p></div>
+    <div class="feature"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg></div><h3>No Quality Loss</h3><p>High-quality multi-step resampling keeps your resized images crisp and sharp — no blur, no artifacts, no watermark.</p></div>
+    <div class="feature"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 10h20"/></svg></div><h3>Completely Free</h3><p>Resize unlimited images with no signup, no account, no hidden fees and no limits on file size or number of images.</p></div>
+    <div class="feature"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></div><h3>Works Everywhere</h3><p>Use this image resize tool on any device — Windows, Mac, Linux, Android or iPhone — directly in your browser.</p></div>
+    <div class="feature"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><path d="M4 7V4h16v3M9 20h6M12 4v16"/></svg></div><h3>All Popular Formats</h3><p>Resize JPG, PNG, WebP and GIF images, and convert between formats while you resize — all in one free tool.</p></div>
+  </div>
+</section>
+
+<section class="content">
+  <h2>More Free Image Tools</h2>
+  <div class="tools-row"><a class="tool-card" href="/compress-image"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><path d="M8 3v5H3M16 3v5h5M8 21v-5H3M16 21v-5h5"/></svg><h3>Compress Image</h3><p>Reduce image file size while keeping great quality.</p></a><a class="tool-card" href="/crop-image"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><path d="M6 2v14a2 2 0 0 0 2 2h14"/><path d="M18 22V8a2 2 0 0 0-2-2H2"/></svg><h3>Crop Image</h3><p>Cut your image to any size or aspect ratio.</p></a><a class="tool-card" href="/convert-image"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg><h3>Convert Image</h3><p>Convert between JPG, PNG and WebP formats.</p></a></div>
+</section>
+
+<section class="content">
+  <h2>Resize Image to Exact Pixels — The Easy Way</h2>
+  <p>Whether you need to <strong>resize an image</strong> for Instagram, a website banner, an email attachment, a job application, or a school project, our free <strong>image resizer</strong> makes it effortless. Just upload a photo, type the width and height you need, and download the perfectly resized result.</p>
+  <p>Unlike desktop software such as Photoshop, this online <strong>photo resizer</strong> requires no installation and no learning curve. And unlike many other online tools, it processes your image directly on your device, which means your personal photos remain completely private and the results appear instantly.</p>
+  <h3>Popular image sizes people resize to</h3>
+  <ul>
+    <li><strong>1920 × 1080</strong> — Full HD wallpapers, YouTube thumbnails and presentations</li>
+    <li><strong>1080 × 1080</strong> — Instagram square posts</li>
+    <li><strong>1200 × 630</strong> — Facebook and link-preview (Open Graph) images</li>
+    <li><strong>1280 × 720</strong> — HD video thumbnails and web banners</li>
+    <li><strong>800 × 600 or smaller</strong> — Email attachments, forums and fast-loading web pages</li>
+  </ul>
+  <p>Need a specific file size instead of dimensions? After resizing, run your photo through our <a href="/compress-image">image compressor</a> to hit an exact KB target. You can also <a href="/crop-image">crop your image</a> to a different aspect ratio or <a href="/convert-image">convert it to JPG, PNG or WebP</a>.</p>
+</section>
+
+<section class="content">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq"><details><summary>How do I resize an image online for free?</summary><div class="faq-a">Upload your image to our free image resizer, enter the width and height in pixels (or choose a percentage), then click Resize Image. Your resized photo downloads instantly — no signup, no watermark, completely free.</div></details><details><summary>Does resizing an image reduce its quality?</summary><div class="faq-a">Making an image smaller keeps quality very high because our photo resizer uses high-quality resampling. Enlarging an image beyond its original size can look soft, so we recommend downscaling whenever possible.</div></details><details><summary>Is it safe to resize photos on this website?</summary><div class="faq-a">Yes. All image resizing happens locally in your browser using JavaScript. Your photos are never uploaded to any server, so your files stay 100% private.</div></details><details><summary>What image formats does the image resizer support?</summary><div class="faq-a">You can resize JPG, JPEG, PNG, WebP and GIF images. You can also change the output format to JPG, PNG or WebP while resizing.</div></details><details><summary>Can I resize an image to a specific file size in KB?</summary><div class="faq-a">Yes — first resize the dimensions here, then use our Compress Image tool and adjust the quality slider until the estimated size matches the KB size you need.</div></details><details><summary>Can I resize images on my phone?</summary><div class="faq-a">Absolutely. This image resize tool works on any device — Android, iPhone, tablet or desktop — right in your web browser with no app to install.</div></details></div>
+</section>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a href="/" class="brand"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="2" y="2" width="24" height="24" rx="6" fill="#2563eb"/><path d="M8 18l4-5 3 3.5L17.5 14l2.5 4H8z" fill="#fff"/><circle cx="10.5" cy="9.5" r="1.8" fill="#fff"/></svg><span>Images<span style="color:var(--primary)">Resizer</span></span></a>
+        <p>Free online image resizer, compressor, cropper and converter. All processing happens in your browser — your photos never leave your device.</p>
+      </div>
+      <div>
+        <h4>Tools</h4>
+        <ul>
+          <li><a href="/">Image Resizer</a></li>
+          <li><a href="/compress-image">Compress Image</a></li>
+          <li><a href="/crop-image">Crop Image</a></li>
+          <li><a href="/convert-image">Convert Image</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/blog/how-to-resize-image-without-losing-quality">Resize Without Quality Loss</a></li>
+          <li><a href="/blog/social-media-image-sizes">Social Media Image Sizes</a></li>
+          <li><a href="/blog/jpg-vs-png-vs-webp">JPG vs PNG vs WebP</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">© 2026 images-resizer.com — Free Online Image Resizer. All rights reserved.</div>
+  </div>
+</footer>
+<script src="/assets/common.js"></script>
+<script src="/assets/resize.js"></script>
+</body>
+</html>
